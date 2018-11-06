@@ -1,0 +1,15 @@
+
+
+.dreamcard{
+    border: 2px solid grey;
+    margin-top:5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 20px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(5,5,5,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(5,5,5,1);
+    box-shadow: 10px 10px 5px 0px rgba(5,5,5,1);
+    color: blanchedalmond;
+    
+}

@@ -1,0 +1,12 @@
+.landing-container {
+    width: 50%;
+    height: 60%;
+    border: 1px solid gainsboro;
+    margin: auto;
+    margin-top: 150px;
+    background-color: salmon;
+    -webkit-box-shadow: 1px 22px 0px 73px rgba(0,0,0,0.62);
+-moz-box-shadow: 1px 22px 0px 73px rgba(0,0,0,0.62);
+box-shadow: 1px 22px 0px 73px rgba(0,0,0,0.62);
+}
+
