@@ -8,6 +8,8 @@
     background: grey;
     text-decoration: none;
     color: white;
+    stop-opacity: initial;
+    z-index: 1;
 
   
   }
@@ -18,6 +20,7 @@
     width: 100%;
     text-decoration: none;
     z-index: 1;
+    /* stop-opacity: inherit; */
    
    
   }
@@ -64,6 +67,9 @@
     cursor: pointer;
     color: white;
     text-decoration: none;
+    margin-right: 40px;
+    margin-left: 0px;
+    
   }
   
   ul:hover{
@@ -77,19 +83,24 @@
   a {
     text-decoration: none; 
     color: white;
-    z-index: 1;
+    
   }
 
   .sidenav{
     text-align: center;
     margin-top: 40px;
-    margin-right: 50px;
+    margin-right: 70px;
     background-color:  grey;
     border-radius: 20px;
+    position: absolute;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    z-index: 5;
   }
 
   
-@media (max-width: 900px){
+@media (max-width: 1044px){
   .hamburger{
     display: block;
     color: yellow;

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import AliceCarousel from 'react-alice-carousel';
-import publicView from '../public/publicView.css'
+import publicView from '../public/publicView.css';
+import moment from 'moment'
 
 class PublicV extends Component {
     constructor() {
@@ -50,9 +51,13 @@ class PublicV extends Component {
 
 
     render() {
+        console.log('dreams on state', this.state.publicDreams)
         const dreams = this.state.publicDreams.map((e, i) => {
             return (
-                <h3 className="dreamcard" key={e.dream_id}>{e.dream}</h3>
+                <div className="dreamcard">
+                    <h8 id="timeStamp" >{moment(e.date_created).format('LLL')}</h8>
+                    <h3 className="dreamcard" key={e.dream_id}>{e.dream}</h3>
+                </div>
             )
         })
         return (

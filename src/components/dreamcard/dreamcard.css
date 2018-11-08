@@ -1,0 +1,26 @@
+.ratingContainer{
+    margin:0px;
+}
+
+h3:hover{
+    cursor: pointer;
+}
+
+
+input{
+    border: 1px solid white;
+}
+
+input:hover{
+    border: 1px solid black;
+}
+
+
+#timeStamp{
+    font-size:xx-small;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color:grey;
+}
+

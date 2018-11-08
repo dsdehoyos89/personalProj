@@ -1,35 +1,61 @@
 
+.dreamCardContainer{
+    /* display: flex; */
 
+    
+}
 
 .dreamcard{
-    border: 2px solid grey;
+    border: 1px solid black;
     margin-top:5%;
     margin-bottom: 5%;
     margin-right: 5%;
     margin-left: 5%;
-    padding: 20px;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(5,5,5,1);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(5,5,5,1);
-    box-shadow: 10px 10px 5px 0px rgba(5,5,5,1);
+    padding: 50px;
+    position: relative;
+    /* -webkit-box-shadow: 2px 2px 4x 2px rgba(5,5,5,1);
+    -moz-box-shadow: 2px 2px 4px 2px rgba(5,5,5,1);
+    box-shadow: 2px 2px 4px 2px rgba(5,5,5,1); */
     color: black;
+    background-color: white;
+    /* display:flex; */
+    /* display: inline-block; */
+    /* flex-wrap: wrap; */
+    
     /* z-index: 1;
     opacity: 1; */
     
 }
 
 .dreamcard > .shareButt {
-    position: absolute;
-    right: 0;
+    position: relative;
+    
     
     /* border-radius: 50%; */
     background-color: black; /* Green */
-    border-radius: 12px;
+    border-radius: 15px 50px;
     color: white;
     padding: 8px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
+
     
+}
+
+.ratingCont{
+    /* flex-direction: row;
+    flex-flow: wrap;
+     */
+     align-items: center;
+     display:flex;
+     justify-content: center;
+     /* align-content: space-between; */
+
+}
+
+.ratingCont > div {
+    margin:2%;
 }
 

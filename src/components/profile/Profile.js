@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import profile from '../profile/profile.css'
 import DreamCard from '../dreamcard/DreamCard'
+import StarRatingComponent from 'react-star-rating-component'
 
 import { connect } from 'react-redux';
 
@@ -15,11 +16,11 @@ class Profile extends Component {
         this.state = {
             dream: [],
             isClicked: false,
-
+            rating: 1
 
         }
         this.shareHandler = this.shareHandler.bind(this);
-        this.handleMouseClick = this.handleMouseClick.bind(this);
+
 
     }
 
@@ -47,20 +48,7 @@ class Profile extends Component {
 
     }
 
-    handleMouseClick() {
-        this.setState(this.toggle)
-    }
 
-    toggle(state) {
-        return {
-            isClicked: !state.isClicked,
-
-        }
-    }
-
-    renderOne(value) {
-        console.log(value)
-    }
 
 
 
@@ -80,13 +68,15 @@ class Profile extends Component {
 
 
     render() {
-        console.log("profileJS", this.state.dream)
+
+        const { rating } = this.state;
 
         const display = this.state.dream.map((e, i) => {
 
             return (
                 <DreamCard
                     key={i}
+                    dreamId={e.dream_id}
                     e={e}
                     share={this.shareHandler}
 
@@ -105,17 +95,18 @@ class Profile extends Component {
         })
 
         return (
-            <body id='profile'>
-                <div>
-                    <h2>Profile view</h2>
-                    <div >
 
-                        {display}
+            <div>
+                <h2>Profile view</h2>
+
+                <div className="dreamCardContainer">
+
+                    {display}
 
 
-                    </div>
                 </div>
-            </body>
+            </div>
+
         )
     }
 }

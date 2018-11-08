@@ -21,6 +21,7 @@ class Input extends Component {
 
     componentDidMount() {
         this.props.getUser();
+
     }
 
     handleSubmit = () => {
@@ -38,6 +39,7 @@ class Input extends Component {
     render() {
         console.log(this.state.dream)
         console.log(this.props)
+        console.log(this.props.user)
         return (
             <div className="inputContainer">
                 <h1>Dream Input</h1>

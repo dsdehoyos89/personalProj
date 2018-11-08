@@ -9,7 +9,10 @@
     color: black;
     display: flex;
     box-shadow: 1px 1px 2px 2px ;
-
+    /* position: -webkit-sticky;
+    position: sticky;
+    top: 0; */
+    
 
 }
 
@@ -36,4 +39,18 @@
     right: 35px;
     text-decoration: none ;
     color: white;
+    z-index: 1;
 }
+
+@media only screen and (max-width: 435px ){
+    .logo{
+        width:40px;
+        height: 40px;
+    }
+
+    .appName{
+        font-size: 15px;
+        margin-left: 45px;
+    } 
+}
+

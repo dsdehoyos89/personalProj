@@ -9,7 +9,7 @@ const authCtrl = require('./controllers/authCtrl')
 
 
 
-const { addDream, getDream, getUser, shareDream, getPublicDreams } = require('./controllers/controller')
+const { addDream, getDream, getUser, shareDream, getPublicDreams, addRating } = require('./controllers/controller')
 
 
 const app = express();
@@ -42,6 +42,7 @@ app.post('/api/dreams', addDream);
 app.get('/api/dreams/:id', getDream);
 app.put('/api/dreams', shareDream);
 app.get('/api/publicDreams', getPublicDreams);
+// app.put('/api/ratings', addRating)
 // app.get('/api/user', getUser);
 
 

@@ -39,7 +39,7 @@ module.exports = {
             })
     },
     shareDream: (req, res, next) => {
-        console.log(req.body.value, 'req.body in shareDream')
+        // console.log(req.body.value, 'req.body in shareDream')
 
 
         const dbInstance = req.app.get('db')
@@ -62,6 +62,22 @@ module.exports = {
                 res.status(500).send(error)
                 console.log('ERROR IN GETPUBLICDREAMS', error)
             })
+    },
+    addRating: (req, res, next) => {
+        console.log(req.body, 'req.body in addRating')
+
+        const dbInstance = req.app.get('db')
+        // const {lucidity,cohesion,rating,dream_id}=req.body;
+
+        dbInstance
+            .addRating([lucidity, cohesion, rating, dream_id])
+            .then(response => res.status(200).send(response))
+            .catch(error => {
+                res.status(500).send(error)
+                console.log('ERROR IN ADDRATING IN CTRLER', error)
+            })
+
     }
+
 
 }

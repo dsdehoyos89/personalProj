@@ -1,24 +1,39 @@
 body{
-  background-color: #4c5b61;
-  width:100%;
-  height: 100%;
-  background-image: url("https://source.unsplash.com/2000x1312/?clouds");
+  /* background-color: #4c5b61; */
+  /* width:100%;
+  height: 100vh; */
+  /* position: fixed; */
+  top: 0; 
+  left: 0;
+
+  min-width: 100%;
+  min-height: 100%;
+  
+
+
+  background-image: url("https://source.unsplash.com/2000x1312/?clouds,stars,sky ");
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-repeat: repeat-y;
   background-position: center;
-  background-size: cover;
-  
-  
+  background-size: cover; */
+
+
+  /* https://source.unsplash.com/2000x1312/?clouds */
+  /* https://source.unsplash.com//1600x900/?nature,wallpapers,clouds */
   /* http://neosurrealismart.com/3d-artist-gallery/3d-artworks/3d-fantasy-art/163d-fantasy-image-denial-B.jpg */
   /* https://wallup.net/wp-content/uploads/2015/12/130172-artwork-fantasy_art-digital_art-abstract-drugs-psychedelic.jpg */
 }
 
-body#profile{
-  background-image: url('https://source.unsplash.com//1600x900/?nature,wallpapers,clouds');
+/* body#profile{
+  background-image: url('https://source.unsplash.com//1600x900/?nature,wallpapers,clouds ');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border: 1px solid black;
-}
+} */
 
 .App {
   text-align: center;
