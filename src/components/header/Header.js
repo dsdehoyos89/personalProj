@@ -8,16 +8,16 @@ import { Link } from 'react-router-dom'
 function Header() {
     return (
         <div className='header'>
-            <div className='logo' onClick={() => <Link to='/'></Link>}>
+            <div className='logo' >
                 <img src='001-indian.svg' alt='dreamcatcher' />
 
-            </div>
-            < h2 className='appName' onClick={() => <Link to='/'></Link>}>DreamCatcher</h2>
+            </div  >
+            < h2 className='appName' ><Link to="/">DreamCatcher</Link> </h2>
             <div className="list">
                 <ListIcon />
             </div>
 
-        </div>
+        </div >
     )
 }
 

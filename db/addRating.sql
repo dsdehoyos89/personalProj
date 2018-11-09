@@ -4,4 +4,5 @@ SET lucidity=$1,
     rating=$3
 WHERE dream_id = $4;
 
-SELECT * FROM dreams;
+SELECT * FROM dreams
+where dream_id=$4;

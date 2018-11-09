@@ -14,12 +14,16 @@ class DreamCard extends Component {
             isClicked: false,
             rating: 1,
             cohesion: 1,
-            lucidity: 1,
-            input: ''
+            lucidity: 1
+
 
         }
         this.handleMouseClick = this.handleMouseClick.bind(this);
-        this.handleTitle = this.handleTitle.bind(this);
+        // this.handleTitle = this.handleTitle.bind(this);
+    }
+
+    componentDidMount() {
+        this.setState({ rating: this.props.e.rating, cohesion: this.props.e.cohesion, lucidity: this.props.e.lucidity })
     }
 
     handleMouseClick() {
@@ -47,32 +51,27 @@ class DreamCard extends Component {
         this.setState({ lucidity: nextValue }, () => this.ratingHandler())
     }
 
-    // handleTitleInput(title) {
-    //     this.setState({ input: title })
-    // }
 
-    handleTitle(event) {
-        console.log(event, event.key, 'dreamcard and event')
-        if (event.key === 'Enter') {
-            this.setState({ input: event })
 
-        }
+    ratingHandler() {
+
+        axios.put(`/api/ratings/${this.props.e.dream_id}`, {
+            lucidity: +this.state.lucidity,
+            cohesion: +this.state.cohesion,
+            rating: +this.state.rating
+        }).then(response => {
+            console.log("response in dreamCard", response)
+            this.setState({
+                lucidity: response.data[0].lucidity,
+                cohesion: response.data[0].cohesion,
+                rating: response.data[0].rating
+            })
+
+        })
+
+
 
     }
-
-
-
-
-    // ratingHandler(value) {
-
-
-    // }
-
-    // ratingHandler() {
-    //     axios.put()
-
-
-    // }
 
 
 
@@ -86,9 +85,9 @@ class DreamCard extends Component {
             <div className="dreamcard">
                 <h8 id="timeStamp" >{moment(this.props.e.date_created).format('LLL')}</h8>
 
-                <h3 className='titleOut'>{this.state.input}</h3>
+                {/* // <h3 className='titleOut'>{this.state.input}</h3>
 
-                <input className='titleInput' onBlur={this.handleTitle}></input>
+                // <input className='titleInput' onClick={this.handleTitle}></input> */}
 
                 <h3 key={this.props.e.dream_id} onClick={() => this.handleMouseClick()} >{this.props.e.dream}</h3>
                 <div className='ratingCont'>
@@ -97,7 +96,7 @@ class DreamCard extends Component {
                         <StarRatingComponent
                             name="cohesion"
                             starCount={5}
-                            value={this.props.e.cohesion}
+                            value={this.state.cohesion}
                             key={this.props.dream_id}
                             onStarClick={this.onStarCohesionClick.bind(this)}
                         // onChange={(e) => this.ratingHandler(e.target.value)}
@@ -109,7 +108,7 @@ class DreamCard extends Component {
                         <StarRatingComponent
                             name="rating"
                             starCount={5}
-                            value={this.props.e.rating}
+                            value={this.state.rating}
                             onStarClick={this.onStarClick.bind(this)}
                         />
                     </div>
@@ -119,7 +118,7 @@ class DreamCard extends Component {
                         <StarRatingComponent
                             name="lucidity"
                             starCount={5}
-                            value={this.props.e.lucidity}
+                            value={this.state.lucidity}
                             onStarClick={this.onStarLucidityClick.bind(this)}
                         />
                     </div>

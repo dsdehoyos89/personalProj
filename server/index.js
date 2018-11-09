@@ -42,7 +42,7 @@ app.post('/api/dreams', addDream);
 app.get('/api/dreams/:id', getDream);
 app.put('/api/dreams', shareDream);
 app.get('/api/publicDreams', getPublicDreams);
-// app.put('/api/ratings', addRating)
+app.put('/api/ratings/:id', addRating)
 // app.get('/api/user', getUser);
 
 

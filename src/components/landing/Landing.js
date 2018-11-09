@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import landing from '../landing/landing.css'
 import profile from '../profile/profile.css'
+import { Link } from 'react-router-dom'
 
 class Landing extends Component {
 
 
     render() {
+
         return (
             <div>
 
@@ -20,7 +22,7 @@ class Landing extends Component {
                 </div>
                 <div className="bottomCont">
                     <p>Enter your first dream and...</p>
-                    <button className="getStarted" >Get Started</button>
+                    <button className="getStarted" ><Link to="/input">Get Started</Link></button>
 
                 </div>
             </div>

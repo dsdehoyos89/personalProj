@@ -97,7 +97,7 @@ class Profile extends Component {
         return (
 
             <div>
-                <h2>Profile view</h2>
+                <h2>My Dreams</h2>
 
                 <div className="dreamCardContainer">
 

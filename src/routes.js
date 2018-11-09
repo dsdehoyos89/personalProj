@@ -15,7 +15,7 @@ export default (
         <Route path='/input' component={Input} />
         <Route path='/public' component={PublicV} />
         <Route path='/profile' component={Profile} />
-        <Route path='/editor' component={TextEditor} />
+
 
     </Switch>
 )

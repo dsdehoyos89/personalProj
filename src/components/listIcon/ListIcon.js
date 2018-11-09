@@ -6,11 +6,11 @@ class ListIcon extends Component {
     state = {
         sideNav: false,
         links: [
-            <Link to='/'>Landing</Link>,
+            <Link to='/'>About</Link>,
             <Link to='/public'>Public</Link>,
             <Link to='/input'>Input</Link>,
-            <Link to="/profile">Profile view</Link>,
-            <Link to='/editor'>Editor</Link>
+            <Link to="/profile">My Dreams</Link>,
+
 
         ]
     }

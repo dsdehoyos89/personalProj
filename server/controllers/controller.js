@@ -65,12 +65,13 @@ module.exports = {
     },
     addRating: (req, res, next) => {
         console.log(req.body, 'req.body in addRating')
+        console.log(req.params)
 
         const dbInstance = req.app.get('db')
-        // const {lucidity,cohesion,rating,dream_id}=req.body;
+        const { lucidity, cohesion, rating } = req.body;
 
         dbInstance
-            .addRating([lucidity, cohesion, rating, dream_id])
+            .addRating([lucidity, cohesion, rating, req.params.id])
             .then(response => res.status(200).send(response))
             .catch(error => {
                 res.status(500).send(error)
