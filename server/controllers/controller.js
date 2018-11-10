@@ -78,6 +78,19 @@ module.exports = {
                 console.log('ERROR IN ADDRATING IN CTRLER', error)
             })
 
+    },
+    deleteDream: (req, res, next) => {
+        console.log(req.params, " delete dream controller")
+        console.log(req.session.passport.user.user_id, 'req.session.user_id in delete dreams controller')
+
+        const dbInstance = req.app.get('db')
+        dbInstance
+            .deleteDream([req.params.id])
+            .then(response => res.status(200).send(response))
+            .catch(error => {
+                res.status(500).send(error)
+                console.log('ERROR IN DELETEDREAM CTRLER', error)
+            })
     }
 
 

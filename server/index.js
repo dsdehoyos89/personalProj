@@ -9,7 +9,7 @@ const authCtrl = require('./controllers/authCtrl')
 
 
 
-const { addDream, getDream, getUser, shareDream, getPublicDreams, addRating } = require('./controllers/controller')
+const { addDream, getDream, getUser, shareDream, getPublicDreams, addRating, deleteDream } = require('./controllers/controller')
 
 
 const app = express();
@@ -43,6 +43,7 @@ app.get('/api/dreams/:id', getDream);
 app.put('/api/dreams', shareDream);
 app.get('/api/publicDreams', getPublicDreams);
 app.put('/api/ratings/:id', addRating)
+app.delete('/api/dreams/delete/:id', deleteDream)
 // app.get('/api/user', getUser);
 
 
@@ -85,7 +86,7 @@ function authenticated(req, res, next) {
 //USER ENPOINTS
 // app.post('/api/user', addUser);
 
-// app.get('/api/logout', logout)
+// 
 
 
 

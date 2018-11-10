@@ -27,11 +27,15 @@ class Profile extends Component {
 
     async componentDidMount() {
         await this.props.getUser();
-        await axios.get(`/api/dreams/${this.props.user.user_id}`)
-            .then(response => this.setState({ dream: response.data }));
+        await this.getDreams();
 
 
 
+    }
+
+    getDreams = () => {
+        axios.get(`/api/dreams/${this.props.user.user_id}`)
+            .then(response => this.setState({ dream: response.data }))
     }
 
     // getUser = () => {
@@ -49,21 +53,14 @@ class Profile extends Component {
     }
 
 
+    deleteDream(e) {
+        console.log(e)
+        axios.delete(`/api/dreams/delete/${e}`)
+            .then(() => {
+                this.getDreams()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            })
+    }
 
 
 
@@ -79,6 +76,7 @@ class Profile extends Component {
                     dreamId={e.dream_id}
                     e={e}
                     share={this.shareHandler}
+                    delete={(e) => this.deleteDream(e)}
 
 
                 />

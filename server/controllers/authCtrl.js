@@ -87,6 +87,16 @@ module.exports = app => {
         })
     );
 
+
+    const logout = (req, res) => {
+        req.session.destroy(() => {
+            res.redirect(REACT_APP_CLIENT + '/public')
+        })
+    }
+
+    app.get('/api/logout', logout);
+
+
     //     app.get('/api/test', (req, res) => res.status(200).json(req.session))
 
 

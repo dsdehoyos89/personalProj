@@ -24,3 +24,28 @@ input:hover{
     color:grey;
 }
 
+.deleteButton{
+    color: #f8f8ff;
+    background-color: #f8f8ff;
+    position: absolute;
+    bottom: 5px; 
+    right: 5px;
+    border-radius: 15px 50px;
+    /* border: #FAEBD7; */
+}
+
+.deleteButton:hover{
+    cursor: pointer;
+    color: black;
+    
+
+}
+
+#userName{
+    font-size: medium;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: grey;
+}
+

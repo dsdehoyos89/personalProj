@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import listIcon from '../listIcon/listicon.css'
+import listIcon from '../listIcon/listicon.css';
+
+import { connect } from 'react-redux';
+import { getUser } from '../../ducks/reducer';
+
+
+
 
 class ListIcon extends Component {
     state = {
@@ -14,14 +20,38 @@ class ListIcon extends Component {
 
         ]
     }
+
+
+
+    componentDidMount() {
+        this.props.getUser();
+    }
+
+
     render() {
+        console.log(this.props, 'props from storre ')
         const redirect = () => {
             window.location.href = `${process.env.REACT_APP_SERVER}/login`;
+        };
+
+        const redirectLogout = () => {
+            window.location.href = `${process.env.REACT_APP_SERVER}/login`
         }
+
+
+
         const { sideNav } = this.state;
         let linkMap = this.state.links.map((link, index) => {
             return <ul key={index}><Link to={link.props.to}>{link.props.children}</Link></ul>
         })
+
+        let buttonToggle = this.props.loggedIn ? <button onClick={() => redirectLogout()}> Logout </button> :
+            <button onClick={() => redirect()}>Login</button>
+
+
+
+
+
         return (
 
 
@@ -43,8 +73,9 @@ class ListIcon extends Component {
 
                 </div>
                 <div>
-                    {/* <button onClick={} */}
-                    <button onClick={() => redirect()}>Login</button>
+
+                    {/* <button onClick={() => redirect()}>Login</button> */}
+                    {buttonToggle}
                 </div>
 
             </nav>
@@ -53,4 +84,6 @@ class ListIcon extends Component {
     }
 }
 
-export default ListIcon;
+const mapStateToProps = state => (state);
+
+export default connect(mapStateToProps, { getUser })(ListIcon);

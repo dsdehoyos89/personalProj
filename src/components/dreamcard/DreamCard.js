@@ -55,6 +55,7 @@ class DreamCard extends Component {
 
     ratingHandler() {
 
+
         axios.put(`/api/ratings/${this.props.e.dream_id}`, {
             lucidity: +this.state.lucidity,
             cohesion: +this.state.cohesion,
@@ -78,11 +79,10 @@ class DreamCard extends Component {
 
 
 
-
     render() {
         console.log(this.props)
         return (
-            <div className="dreamcard">
+            <div className="dreamcard" >
                 <h8 id="timeStamp" >{moment(this.props.e.date_created).format('LLL')}</h8>
 
                 {/* // <h3 className='titleOut'>{this.state.input}</h3>
@@ -126,6 +126,7 @@ class DreamCard extends Component {
                 </div>
 
                 {this.state.isClicked && <button className="shareButt" onClick={() => this.props.share(this.props.e.dream_id)}>Share</button>}
+                <button className="deleteButton" onClick={() => this.props.delete(this.props.e.dream_id)}>delete</button>
             </div >
         )
 
