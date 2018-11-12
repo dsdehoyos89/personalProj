@@ -5,6 +5,9 @@ import StarRatingComponent from 'react-star-rating-component'
 import dreamcard from '../dreamcard/dreamcard.css'
 import axios from 'axios';
 import moment from 'moment';
+import DeleteSharpIcon from '@material-ui/icons/DeleteSharp'
+import Share from '@material-ui/icons/Share'
+
 
 
 class DreamCard extends Component {
@@ -83,7 +86,7 @@ class DreamCard extends Component {
         console.log(this.props)
         return (
             <div className="dreamcard" >
-                <h8 id="timeStamp" >{moment(this.props.e.date_created).format('LLL')}</h8>
+                <h8 id="timeStamp" >Posted on:{moment(this.props.e.date_created).format('LLL')}</h8>
 
                 {/* // <h3 className='titleOut'>{this.state.input}</h3>
 
@@ -125,8 +128,8 @@ class DreamCard extends Component {
 
                 </div>
 
-                {this.state.isClicked && <button className="shareButt" onClick={() => this.props.share(this.props.e.dream_id)}>Share</button>}
-                <button className="deleteButton" onClick={() => this.props.delete(this.props.e.dream_id)}>delete</button>
+                {this.state.isClicked && <button className='share'><Share onClick={() => this.props.share(this.props.e.dream_id)} /></button>}
+                <DeleteSharpIcon className="deleteButton" onClick={() => this.props.delete(this.props.e.dream_id)} />
             </div >
         )
 
@@ -134,4 +137,4 @@ class DreamCard extends Component {
 
 }
 
-export default DreamCard;
+export default DreamCard; 

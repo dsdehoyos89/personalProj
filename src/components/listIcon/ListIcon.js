@@ -29,7 +29,8 @@ class ListIcon extends Component {
 
 
     render() {
-        console.log(this.props, 'props from storre ')
+        console.log(this.props, 'user information')
+
         const redirect = () => {
             window.location.href = `${process.env.REACT_APP_SERVER}/login`;
         };

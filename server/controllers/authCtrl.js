@@ -90,7 +90,7 @@ module.exports = app => {
 
     const logout = (req, res) => {
         req.session.destroy(() => {
-            res.redirect(REACT_APP_CLIENT + '/public')
+            res.redirect(REACT_APP_CLIENT + '/login')
         })
     }
 
