@@ -53,6 +53,7 @@ class PublicV extends Component {
                         <Modal className='modal' open={open} onClose={this.onCloseModal} center>
                             <h2>Enter Comment below...</h2>
                             <textarea
+                                id='textArea'
                                 defaultValue={this.state.comment}
                                 maxLength={250}
                                 onChange={e => this.setState({ comment: e.target.value })}
@@ -60,12 +61,12 @@ class PublicV extends Component {
                             />
                             <button>Submit</button>
                         </Modal>
-                        <div className="commentSection">
+                        {/* <div className="commentSection">
                             <h2>Comment Section</h2>
                             <div className="commentContainer">
                                 Comments
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             )

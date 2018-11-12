@@ -46,8 +46,7 @@ class Input extends Component {
                 <textarea className="input" placeholder="Enter your dream..." value={this.state.dream} onChange={(e) => this.handleChange(e.target.value)}>
 
                 </textarea >
-                <h2 >Tag Input</h2>
-                <input style={{ width: "50px", margin: "auto", border: "15px" }}></input>
+
 
                 <button className="btn" onClick={this.handleSubmit} >Submit Dream</button>
 
