@@ -16,6 +16,7 @@ class ListIcon extends Component {
             <Link to='/public'>Public</Link>,
             <Link to='/input'>Input</Link>,
             <Link to="/profile">My Dreams</Link>,
+            <Link to='/splash'>Splash</Link>
 
 
         ]
