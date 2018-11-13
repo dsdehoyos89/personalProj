@@ -29,11 +29,31 @@ class Splash extends Component {
             })
 
 
+
+
     }
 
     trackQueryValue(e) {
         this.state.query = e.target.value
     }
+
+
+    onKeyUp = (e) => {
+        if (e.which === 13) {
+            fetch(`${endPoint}?query=${this.state.query}&client_id=${clientId}`)
+                .then(response => {
+                    return response.json()
+                }).then(jsonResponse => {
+                    this.setState({ photos: jsonResponse.results })
+                })
+
+
+
+
+            e.target.value = '';
+        }
+    }
+
 
 
     render() {
@@ -49,8 +69,10 @@ class Splash extends Component {
         })
         return (
             <div className="bodyContainer">
-                <input type="text" onChange={this.trackQueryValue}></input>
-                <button onClick={this.search}> Change Background</button>
+                <div className="inputCont">
+                    <input id='searchInput' type="text" onChange={this.trackQueryValue} onKeyUp={(e) => this.onKeyUp(e)} ></input>
+                    {/* <button id="searchButton" onClick={this.search}>Search</button> */}
+                </div>
                 <div className='photosContainer'>
 
                     {photosRend}

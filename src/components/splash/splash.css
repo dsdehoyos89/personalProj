@@ -8,7 +8,7 @@
     width: 100vw;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
 }
 
@@ -24,6 +24,25 @@
     width: auto;
     height: auto;
     border-radius: 4px;
-    background: tan;
+    background: grey;
+}
+
+.inputCont{
+    display: flex;
+    align-self: center;
+    display: inline-block;
+}
+
+#searchInput{
+    margin:auto;
+    margin-right: 5%;
+    opacity: .5;
+    
+}
+
+#searchButton{
+
+    margin:auto;
+    margin-top: 5%;
 }
 

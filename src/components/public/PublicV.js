@@ -14,7 +14,8 @@ class PublicV extends Component {
             publicDreams: [],
             currentIndex: 0,
             open: false,
-            comment: ''
+            comment: '',
+
         }
     }
 
@@ -39,6 +40,8 @@ class PublicV extends Component {
 
     render() {
         const { open } = this.state;
+        let buttonToggle = this.props.loggedIn ? <h1 id="conditionalRendIn" > Public View</h1> :
+            <h1 id="conditionalRend">Login/signup</h1>
         console.log('dreams on state', this.state.publicDreams)
         console.log('user in publicView', this.props)
         // console.log(this.state.publicDreams.e.profile_name)
@@ -61,19 +64,14 @@ class PublicV extends Component {
                             />
                             <button>Submit</button>
                         </Modal>
-                        {/* <div className="commentSection">
-                            <h2>Comment Section</h2>
-                            <div className="commentContainer">
-                                Comments
-                            </div>
-                        </div> */}
+
                     </div>
                 </div>
             )
         })
         return (
             <div>
-                This is the public dream view.
+                {buttonToggle}
                 {dreams}
             </div>
         )

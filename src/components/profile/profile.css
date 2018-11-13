@@ -37,10 +37,10 @@
  
     
     /* border-radius: 50%; */
-    background-color: black; /* Green */
+    /* background-color: black; Green */
     border-radius: 15px 50px;
     color: white;
-    padding: 8px 10px;
+    padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -64,3 +64,32 @@
     margin:2%;
 }
 
+#loggedOutMess{
+    width: 40vw;
+      margin: auto;
+      margin-top: 25%;
+      border: 2px solid white;
+      background: white;
+      border-radius: 4px;
+      padding: 10px;
+}
+
+#loggedInTitle{
+    width: 20vw;
+    margin: auto;
+    color: white;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 4px;
+    padding: 10px;
+
+}
+
+
+  
+@media (max-width: 400px){
+    .dreamcard{
+      font-size: 1em;
+    }
+
+}

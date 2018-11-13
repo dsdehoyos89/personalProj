@@ -42,7 +42,7 @@ class Input extends Component {
         console.log(this.props.user)
         return (
             <div className="inputContainer">
-                <h1>Dream Input</h1>
+                <h1 id="dreamInputTitle">Dream Input</h1>
                 <textarea className="input" placeholder="Enter your dream..." value={this.state.dream} onChange={(e) => this.handleChange(e.target.value)}>
 
                 </textarea >

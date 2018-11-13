@@ -43,3 +43,13 @@ textarea{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
 }
+
+#dreamInputTitle{
+    width: 20vw;
+    background: transparent;
+    opacity: .7;
+    color: white;
+    padding: 10px;
+    border: 2px white solid;
+    margin: auto;
+}

@@ -68,6 +68,9 @@ class Profile extends Component {
 
         const { rating } = this.state;
 
+        let loggedInMess = this.props.loggedIn ? <h1 id="loggedInTitle"> My Dreams</h1> :
+            <h1 id='loggedOutMess'>Login/signup</h1>
+
         const display = this.state.dream.map((e, i) => {
 
             return (
@@ -95,7 +98,7 @@ class Profile extends Component {
         return (
 
             <div>
-                <h2>My Dreams</h2>
+                {loggedInMess}
 
                 <div className="dreamCardContainer">
 

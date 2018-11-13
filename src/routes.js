@@ -7,6 +7,7 @@ import PublicV from './components/public/PublicV';
 import Profile from './components/profile/Profile';
 import TextEditor from './components/editor/TextEditor';
 import Splash from './components/splash/Splash'
+import SignUp from './components/signUp/SignUp'
 
 
 export default (
@@ -17,6 +18,8 @@ export default (
         <Route path='/public' component={PublicV} />
         <Route path='/profile' component={Profile} />
         <Route path='/splash' component={Splash} />
+        <Route path='/signup' component={SignUp} />
+
 
 
     </Switch>

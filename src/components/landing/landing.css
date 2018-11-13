@@ -18,14 +18,17 @@
 .landing-container {
     width: 50%;
     height: 60%;
-    border: 1px solid gainsboro;
+    border: 3px solid gainsboro;
     margin: auto;
-    margin-top: 150px;
-    background-color:grey;
-    -webkit-box-shadow: 1px 22px 0px 73px rgba(0,0,0,0.62);
+    margin-top: 8%;
+    /* background-color:grey; */
+    /* -webkit-box-shadow: 1px 22px 0px 73px rgba(0,0,0,0.62);
 -moz-box-shadow: 1px 22px 0px 73px rgba(0,0,0,0.62);
 box-shadow: 1px 22px 0px 73px rgba(0,0,0,0.62);
-padding: 10px;
+padding: 10px; */
+    color:white;
+    opacity: .8;
+    padding: 20px;
 }
 
 .introContent{
@@ -45,8 +48,10 @@ padding: 10px;
 }
 
 .getStarted{
-    background-color: black;
+    background-color: transparent;
     border-radius: 15px 50px;
-    color: #f8f8ff;
+    color: white;
+    padding: 15px;
+    opacity: .6;
 
 }
