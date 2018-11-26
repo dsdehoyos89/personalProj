@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import landing from '../landing/landing.css'
 import profile from '../profile/profile.css'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 class Landing extends Component {
 
@@ -30,4 +30,4 @@ class Landing extends Component {
     }
 }
 
-export default Landing;
+export default withRouter(Landing);

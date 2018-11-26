@@ -12,13 +12,13 @@ import SignUp from './components/signUp/SignUp'
 
 export default (
     <Switch>
-        <Route exact path='/' component={Landing} />
         <Route path='/intro' component={Intro} />
         <Route path='/input' component={Input} />
         <Route path='/public' component={PublicV} />
         <Route path='/profile' component={Profile} />
         <Route path='/splash' component={Splash} />
         <Route path='/signup' component={SignUp} />
+        <Route exact path='/' component={Landing} />
 
 
 

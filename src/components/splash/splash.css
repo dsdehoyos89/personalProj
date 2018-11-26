@@ -1,21 +1,23 @@
 .bodyContainer{
-
+    box-sizing: border-box;
     width: 100vw;
     height: 100vh;
+    overflow-y: auto;
     
 }
 .photosContainer{
     width: 100vw;
     flex-direction: row;
     flex-wrap: wrap;
-    /* border: 1px solid black; */
+    flex-direction: column;
+    
 
 }
 
 .photo{
     /* width: 200px;
     height: 150px; */
-    border: 1px solid black;
+    border: 1px solid #0d0d0d;
     padding: 10px ;
     margin: 10px ;
     display: inline;
@@ -24,7 +26,7 @@
     width: auto;
     height: auto;
     border-radius: 4px;
-    background: grey;
+    background: white;
 }
 
 .inputCont{
@@ -36,7 +38,9 @@
 #searchInput{
     margin:auto;
     margin-right: 5%;
-    opacity: .5;
+    /* opacity: .5; */
+    background: transparent;
+    color: #f0f0f0;
     
 }
 

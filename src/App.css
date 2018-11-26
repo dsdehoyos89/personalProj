@@ -9,8 +9,8 @@ body{
   left: 0;
   font-family: 'Roboto Condensed', sans-serif;
 
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   /* /public/starNightBackground2.jpg */
   /*   */
 /* https://source.unsplash.com/2000x1312/?stars,nightsky */
@@ -21,9 +21,9 @@ body{
   background-size: cover;
   background-repeat: repeat-y;
   background-position: center;
-  background-size: cover; */
-  background-size: cover;
-
+  
+  /* background-size: contain; */
+ background-size: cover; 
   /* https://source.unsplash.com/2000x1312/?clouds */
   /* https://source.unsplash.com//1600x900/?nature,wallpapers,clouds */
   /* http://neosurrealismart.com/3d-artist-gallery/3d-artworks/3d-fantasy-art/163d-fantasy-image-denial-B.jpg */
@@ -36,6 +36,7 @@ body{
   /* background-position: center; */
   
   /* border: 1px solid black; */
+  
 } 
 
 .App {

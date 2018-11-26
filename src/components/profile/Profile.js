@@ -69,7 +69,7 @@ class Profile extends Component {
         const { rating } = this.state;
 
         let loggedInMess = this.props.loggedIn ? <h1 id="loggedInTitle"> My Dreams</h1> :
-            <h1 id='loggedOutMess'>Login/signup</h1>
+            <h1 id='loggedOutMess'>Login/SignUp</h1>
 
         const display = this.state.dream.map((e, i) => {
 
@@ -83,13 +83,6 @@ class Profile extends Component {
 
 
                 />
-                // <h3 className='dreamcard' key={e.dream_id} onClick={() => this.handleMouseClick()} >
-                //     {e.dream}
-
-
-                //     {/* {this.state.isClicked && <button className="shareButt" key={i} onClick={() => this.shareHandler(e.dream_id)}>Share</button>} */}
-                //     {this.state.isClicked ? <button className="shareButt" key={e.dream_id} onClick={() => this.shareHandler(e.dream_id)}>Share</button> : null}
-                // </h3>
 
             )
 

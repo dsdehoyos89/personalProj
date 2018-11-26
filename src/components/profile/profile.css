@@ -1,10 +1,16 @@
 
+
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed');
 
 
 .dreamCardContainer{
-    /* display: flex; */
+    background-image: url("/public/westTexasNightSky.jpg");
+    /* background-size: contain no-repeat; */
+    height: 50vh;
 
+
+    /* background: #1c0d0d;
+    height: 100%; */
     
 }
 
@@ -29,6 +35,9 @@
     
     /* z-index: 1;
     opacity: 1; */
+
+     background-image: url("/public/westTexasNightSky.jpg");
+    background-size: contain repeat-x; 
     
 }
 
@@ -45,6 +54,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
+    background-size: contain repeat-x; 
 
     
 }
@@ -67,11 +77,13 @@
 #loggedOutMess{
     width: 40vw;
       margin: auto;
-      margin-top: 25%;
+      margin-top: 18%;
       border: 2px solid white;
-      background: white;
+      background: transparent;
       border-radius: 4px;
+      color: white;
       padding: 10px;
+      
 }
 
 #loggedInTitle{

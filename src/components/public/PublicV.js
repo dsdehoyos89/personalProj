@@ -70,7 +70,7 @@ class PublicV extends Component {
             )
         })
         return (
-            <div>
+            <div className="dreamCardCont">
                 {buttonToggle}
                 {dreams}
             </div>

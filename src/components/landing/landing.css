@@ -18,7 +18,7 @@
 .landing-container {
     width: 50%;
     height: 60%;
-    border: 3px solid gainsboro;
+    border: 3px solid white;
     margin: auto;
     margin-top: 8%;
     /* background-color:grey; */
@@ -27,7 +27,7 @@
 box-shadow: 1px 22px 0px 73px rgba(0,0,0,0.62);
 padding: 10px; */
     color:white;
-    opacity: .8;
+    /* opacity: .8; */
     padding: 20px;
 }
 
@@ -52,6 +52,6 @@ padding: 10px; */
     border-radius: 15px 50px;
     color: white;
     padding: 15px;
-    opacity: .6;
+    /* opacity: .6; */
 
 }

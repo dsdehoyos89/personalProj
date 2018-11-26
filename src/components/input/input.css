@@ -47,7 +47,7 @@ textarea{
 #dreamInputTitle{
     width: 20vw;
     background: transparent;
-    opacity: .7;
+    /* opacity: .7; */
     color: white;
     padding: 10px;
     border: 2px white solid;
