@@ -12,7 +12,9 @@ class SignUp extends Component {
                     <img src='001-indian.svg' alt='dreamcatcher' ></img>
                 </nav>
                 <div>
-                    <Link to="/about">About</Link>
+                    <Link to="/">About</Link>
+                    <br />
+                    <br />
                     <Link to='/login'>Login/SignUp</Link>
 
                 </div>

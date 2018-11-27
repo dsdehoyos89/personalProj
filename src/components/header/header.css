@@ -5,7 +5,7 @@
     width: 98%;
     margin: 20px ;
     margin-right: px;
-    background-color: grey;
+    background-color: transparent;
     color: black;
     display: flex;
     box-shadow: 1px 1px 2px 2px ;
@@ -21,6 +21,7 @@
     height: 60px;
     color: whitesmoke;
     padding: 10px;
+    background: whitesmoke;
     
 
 
@@ -40,17 +41,20 @@
     text-decoration: none ;
     color: white;
     z-index: 1;
+    
 }
 
 @media only screen and (max-width: 435px ){
     .logo{
-        width:40px;
-        height: 40px;
+        width:30px;
+        height: 30px;
+        position: absolute;
+        
     }
 
     .appName{
-        font-size: 15px;
-        margin-left: 45px;
+        font-size: 10px;
+        margin-left: 4rem;
     } 
 }
 

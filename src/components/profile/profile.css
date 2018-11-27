@@ -104,4 +104,11 @@
       font-size: 1em;
     }
 
+    
+}
+
+@media (max-width: 430px){
+    #loggedInTitle{
+        font-size: 1em;
+    }
 }

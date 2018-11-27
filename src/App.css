@@ -13,8 +13,10 @@ body{
   height: 100%;
   /* /public/starNightBackground2.jpg */
   /*   */
+  /* "https://source.unsplash.com/2000x1312/?stars,nightsky" */
 /* https://source.unsplash.com/2000x1312/?stars,nightsky */
   background-image: url("https://source.unsplash.com/2000x1312/?stars,nightsky")  ;
+  
   /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

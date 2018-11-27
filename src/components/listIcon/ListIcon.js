@@ -16,8 +16,8 @@ class ListIcon extends Component {
             <Link to='/public'>Public</Link>,
             <Link to='/input'>Input</Link>,
             <Link to="/profile">My Dreams</Link>,
-            <Link to='/splash'>Splash</Link>,
-            <Link to='/signup'>Signup</Link>
+            <Link to='/splash'>Splash</Link>
+            // <Link to='/signup'>Signup</Link>
 
 
         ]
@@ -48,8 +48,8 @@ class ListIcon extends Component {
             return <ul key={index}><Link to={link.props.to}>{link.props.children}</Link></ul>
         })
 
-        let buttonToggle = this.props.loggedIn ? <button onClick={() => redirectLogout()}> Logout </button> :
-            <button onClick={() => redirect()}>Login</button>
+        let buttonToggle = this.props.loggedIn ? <button className="logButt" onClick={() => redirectLogout()}> Logout </button> :
+            <button className="logButt" onClick={() => redirect()}>Login</button>
 
 
 

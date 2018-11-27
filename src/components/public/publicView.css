@@ -91,6 +91,14 @@
     #timeStamp{
     display: none;
   } 
+  
 
+}
+
+@media only screen and (max-width: 375px ){
+    #conditionalRendIn{
+        width: 20vw; 
+        font-size: 20px;
+    }
 }
 

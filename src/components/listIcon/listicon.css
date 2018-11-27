@@ -5,7 +5,7 @@
     height: 60px;
     width: 100%;
     padding: 0 1%;
-    background: grey;
+    background: transparent;
     text-decoration: none;
     color: white;
     stop-opacity: initial;
@@ -30,6 +30,17 @@
       text-decoration: none;
       color: white;
   }
+
+  .logButt{
+    border-radius: 15px 50px;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    
+  }
+
+  
   
   .hamburger {
     display: none; 
@@ -91,17 +102,19 @@
     text-align: center;
     margin-top: 40px;
     margin-right: 70px;
-    background-color:  grey;
+    background-color: black;
     border-radius: 20px;
     position: absolute;
     display: flex;
     align-self: center;
     flex-direction: column;
     z-index: 5;
+    color: white;
+  
   }
 
   
-@media (max-width: 1044px){
+@media (max-width: 1200px){
   .hamburger{
     display: block;
     color: yellow;
@@ -115,5 +128,9 @@
   }
   .title{
     font-size: 20px;
+  }
+  .logButt{
+    border-radius: 10px 35px;
+    padding: 10px;
   }
 } 

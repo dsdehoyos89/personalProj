@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import splash from '../splash/splash.css'
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 // import fetch from 'react'
 
 
@@ -13,21 +14,25 @@ class Splash extends Component {
         super();
         this.state = {
             photos: [],
-            query: ''
+            query: '',
+            page: 1,
+            intervalId: 0
         }
 
         this.trackQueryValue = this.trackQueryValue.bind(this);
-        this.search = this.search.bind(this);
+
+        this.loadMorePics = this.loadMorePics.bind(this);
+        this.backToTop = this.backToTop.bind(this);
     }
 
-    search() {
-        fetch(`${endPoint}?query=${this.state.query}&client_id=${clientId}&per_page=20`)
+    loadMorePics() {
+        const { page } = this.state;
+        fetch(`${endPoint}?query=${this.state.query}&client_id=${clientId}&per_page=20&page=${page}`)
             .then(response => {
                 return response.json()
-            }).then(jsonResponse => {
-
-                this.setState({ photos: jsonResponse.results })
-            })
+            }).then(jsonResponse => this.setState({
+                photos: [...this.state.photos, ...jsonResponse.results]
+            }))
 
 
 
@@ -40,9 +45,11 @@ class Splash extends Component {
 
 
     onKeyUp = (e) => {
+
         if (e.which === 13) {
             fetch(`${endPoint}?query=${this.state.query}&client_id=${clientId}&per_page=30`)
                 .then(response => {
+                    console.log(response)
                     return response.json()
                 }).then(jsonResponse => {
                     console.log(jsonResponse)
@@ -56,11 +63,52 @@ class Splash extends Component {
         }
     }
 
-    handleScroll = () => {
-        if (this.scroller && this.scroller.scrollTop < 100) {
-            console.log('reachedTop')
-        }
+
+
+
+
+    loadMore = () => {
+        this.setState(prevState => ({
+            page: prevState.page + 1
+        }), this.loadMorePics)
     }
+
+    // scrollStep() {
+    //     if (window.pageYOffset === 0) {
+    //         clearInterval(this.state.intervalId);
+    //     }
+    //     window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
+    // }
+
+    // scrollToTop() {
+    //     let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
+    //     this.setState({ intervalId: intervalId })
+    // }
+
+    backToTop = () => {
+        console.log('clicked')
+        document.documentElement.scrollTop = 0;
+
+    };
+
+    // window.onscroll = function () {
+    //     scrollFunction();
+    // }
+    // scrollFunction = () => {
+    //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    //         document.getElementById("myBtn").style.display = "block";
+    //     } else {
+    //         document.getElementById("myBtn").style.display = "none";
+    //     }
+    // }
+
+
+
+
+
+
+
+
 
 
 
@@ -89,6 +137,9 @@ class Splash extends Component {
 
                     {photosRend}
                 </div>
+
+                <a className="loadMore" onClick={this.loadMore}>loadMore</a>
+                <button id="topBut" onClick={this.backToTop}>Top</button>
             </div>
         )
     }

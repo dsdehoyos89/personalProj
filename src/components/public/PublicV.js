@@ -51,7 +51,7 @@ class PublicV extends Component {
                     <h8 id="timeStamp" >Posted on:{moment(e.date_created).format('LLL')}</h8>
                     <h8 id="userName">@{e.profile_name}</h8>
                     <h3 className="dreamcard" key={e.dream_id}>{e.dream}</h3>
-                    <button onClick={this.onOpenModal}>Comment</button>
+                    {/* <button onClick={this.onOpenModal}>Comment</button> */}
                     <div className="modalWrapper">
                         <Modal className='modal' open={open} onClose={this.onCloseModal} center>
                             <h2>Enter Comment below...</h2>
