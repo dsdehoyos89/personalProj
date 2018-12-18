@@ -1,60 +1,48 @@
-
-.header{
-    display: inline-block;
-    height: 80px;
-    width: 98%;
-    margin: 20px ;
-    margin-right: px;
-    background-color: transparent;
-    color: black;
-    display: flex;
-    box-shadow: 1px 1px 2px 2px ;
-    /* position: -webkit-sticky;
-    position: sticky;
-    top: 0; */
-    
-
+.header {
+  display: inline-block;
+  height: 80px;
+  width: 98%;
+  margin: 20px;
+  margin-right: px;
+  background-color: transparent;
+  color: black;
+  display: flex;
+  box-shadow: 1px 1px 2px 2px;
 }
 
-.logo{
-    width:60px;
-    height: 60px;
-    color: whitesmoke;
-    padding: 10px;
-    background: whitesmoke;
-    
-
-
+.logo {
+  width: 60px;
+  height: 60px;
+  color: whitesmoke;
+  padding: 10px;
+  background: whitesmoke;
 }
 
-.appName{
+.appName {
+  position: absolute;
+  top: 10px;
+  margin-left: 100px;
+  margin-top: 25px;
+}
+
+.list {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 435px) {
+  .logo {
+    width: 30px;
+    height: 30px;
     position: absolute;
-    top: 10px;
-    margin-left: 100px; 
-    margin-top: 25px;
+  }
+
+  .appName {
+    font-size: 10px;
+    margin-left: 4rem;
+  }
 }
-
-.list{
-    position: absolute; 
-    top: 30px; 
-    right: 35px;
-    text-decoration: none ;
-    color: white;
-    z-index: 1;
-    
-}
-
-@media only screen and (max-width: 435px ){
-    .logo{
-        width:30px;
-        height: 30px;
-        position: absolute;
-        
-    }
-
-    .appName{
-        font-size: 10px;
-        margin-left: 4rem;
-    } 
-}
-
