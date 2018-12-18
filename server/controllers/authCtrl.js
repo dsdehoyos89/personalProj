@@ -58,7 +58,7 @@ module.exports = app => {
 
   app.get("/api/logout", logout);
 
-  app.get("/", (req, res) => {
-    res.redirect(REACT_APP_CLIENT);
-  });
+  //   app.get("/", (req, res) => {
+  //     res.redirect(REACT_APP_CLIENT);
+  //   });
 };

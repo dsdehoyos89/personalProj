@@ -1,4 +1,5 @@
 require("dotenv").config();
+const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 const massive = require("massive");
@@ -42,6 +43,8 @@ massive(process.env.CONNECTION_STRING)
 
 authCtrl(app);
 
+app.use(express.static(`${__dirname}/../build/`));
+
 //DREAM ENDPOINTS
 app.post("/api/dreams", addDream);
 app.get("/api/dreams/:id", getDream);
@@ -66,6 +69,10 @@ function authenticated(req, res, next) {
     res.sendStatus(401);
   }
 }
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build/index.html"));
+});
 
 app.listen(port, () => {
   console.log(`Server listening on port: ${port}`);
